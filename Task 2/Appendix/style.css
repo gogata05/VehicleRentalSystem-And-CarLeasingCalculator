@@ -21,6 +21,16 @@ h1 {
   text-align: center;
 }
 
+#leasingForm {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.box {
+  flex: 1 1 45%; /* Each box will take 45% of the width of the container */
+  margin: 10px 2.5%; /* Adding some margin for spacing between the boxes */
+}
+
 .form-group {
   margin-bottom: 15px;
 }
@@ -54,4 +64,8 @@ input[type='range'] {
 
 .leasing-detail p {
   margin: 5px 0;
+}
+
+#carValue {
+  size: /**/ ;
 }
