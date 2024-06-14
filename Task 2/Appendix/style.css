@@ -38,6 +38,7 @@ h1 {
 label {
   display: block;
   margin-bottom: 5px;
+  font-size: 12px; /* Smaller font size for all labels */
 }
 
 input[type='number'],
@@ -47,14 +48,24 @@ select {
   border: 1px solid #ccc;
   border-radius: 5px;
   margin-bottom: 5px;
+  font-size: 14px; /* Default font size for all inputs and selects */
 }
 
 input[type='range'] {
   width: 100%;
 }
 
+/* Specific styling for car value label to make its text smaller */
+label[for='carValue'] {
+  font-size: 12px;
+}
+
 #leasingDetails {
   margin-top: 20px;
+}
+
+#leasingDetailsTitle {
+  text-align: center; /* Centering the title within the leasingDetails div */
 }
 
 .leasing-detail {
@@ -66,6 +77,14 @@ input[type='range'] {
   margin: 5px 0;
 }
 
-#carValue {
-  size: /**/ ;
+.interest {
+  /* padding-right: 10px; */
+}
+
+.leasing-detail-boarder {
+  border-left-color: black;
+}
+
+.leasingDetails.p {
+  font-size: 52px;
 }

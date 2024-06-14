@@ -10,7 +10,6 @@
     <div class="container">
       <h1>Car Leasing Calculator</h1>
       <form id="leasingForm">
-
         <!-- Car Type -->
         <div class="box">
           <label for="carType">Car Type:</label>
@@ -45,26 +44,25 @@
         <!-- Down Payment -->
         <div class="box">
           <div class="form-group">
-            <label for="downPayment">Down Payment (%):</label>
+            <label for="downPayment">Down Payment (10%-50%):</label>
             <input type="number" id="downPayment" min="10" max="50" step="5" required />
           </div>
           <div class="form-group">
             <input type="range" id="downPaymentRange" min="10" max="50" step="5" oninput="syncDownPayment()" />
           </div>
         </div>
-        
       </form>
 
       <!-- Leasing Details -->
       <div id="leasingDetails">
-        <h2>Leasing Details</h2>
+        <h2 id="leasingDetailsTitle">Leasing Details</h2>
         <div class="leasing-detail">
           <p>Total Leasing Cost: €<span id="totalLeasingCost">0.00</span></p>
-          <p>Down Payment: €<span id="downPaymentAmount">0.00</span></p>
-        </div>
-        <div class="leasing-detail">
           <p>Monthly Installment: €<span id="monthlyInstallment">0.00</span></p>
-          <p>Interest Rate: <span id="interestRate">0.00</span>%</p>
+        </div>
+        <div class="leasing-detail leasing-detail-boarder">
+          <p>Down Payment: €<span id="downPaymentAmount">0.00</span></p>
+          <p class="interest">Interest Rate: <span id="interestRate">0.00</span>%</p>
         </div>
       </div>
     </div>
