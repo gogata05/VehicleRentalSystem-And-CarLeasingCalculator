@@ -262,7 +262,6 @@ namespace VehicleRentalSystem
             }
 
             Console.WriteLine($"Insurance per day: {rental.RentedVehicle.GetAdjustedInsuranceCost():C2}");
-            Console.WriteLine($"Insurance per day: {rental.RentedVehicle.GetAdjustedInsuranceCost():C2}");
             Console.WriteLine();
             if (earlyReturnDiscount > 0)
             {
