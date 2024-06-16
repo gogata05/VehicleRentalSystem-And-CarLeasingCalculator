@@ -6,8 +6,8 @@
 
 Web:
 
-![image](../TS-BONUS-Car-Leasing-Calculator-With-TypeScript/Images/task2Web.png)
+![image](../BONUS-Task-2-With-TypeScript/Images/task2Web.png)
 
 Mobile:
 
-![image](../TS-BONUS-Car-Leasing-Calculator-With-TypeScript/Images/task2Mobile.png)
+![image](../BONUS-Task-2-With-TypeScript/Images/task2Mobile.png)

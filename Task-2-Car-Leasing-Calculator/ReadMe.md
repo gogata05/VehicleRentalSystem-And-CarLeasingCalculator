@@ -1,7 +1,7 @@
 ## How to use?
 
-- 1.Clone repo
-- 2.Use live server
+- 1.Clone Repo
+- 2.Use Live Server
 
 Web:
 

@@ -1,4 +1,5 @@
 Output:
+
 A car that is valued at $15,000.00, and has a security rating of 3
 XXXXXXXXXXXX
 Date: 2024-06-16
