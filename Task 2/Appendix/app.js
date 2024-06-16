@@ -1,4 +1,6 @@
 document.getElementById('leasingForm').addEventListener('input', calculateLeasing);
+document.getElementById('carValue').addEventListener('input', syncCarValueRange);
+document.getElementById('downPayment').addEventListener('input', syncDownPaymentRange);
 
 function calculateLeasing() {
   const carType = document.getElementById('carType').value;
@@ -26,4 +28,22 @@ function calculateLeasing() {
   document.getElementById('monthlyInstallment').innerText = monthlyInstallment.toFixed(2);
   document.getElementById('downPaymentAmount').innerText = downPaymentAmount.toFixed(2);
   document.getElementById('interestRate').innerText = interestRate.toFixed(2);
+}
+
+function syncCarValue() {
+  document.getElementById('carValue').value = document.getElementById('carValueRange').value;
+  calculateLeasing();
+}
+
+function syncDownPayment() {
+  document.getElementById('downPayment').value = document.getElementById('downPaymentRange').value;
+  calculateLeasing();
+}
+
+function syncCarValueRange() {
+  document.getElementById('carValueRange').value = document.getElementById('carValue').value;
+}
+
+function syncDownPaymentRange() {
+  document.getElementById('downPaymentRange').value = document.getElementById('downPayment').value;
 }
