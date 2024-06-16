@@ -39,6 +39,7 @@ namespace VehicleRentalSystem
         public abstract decimal GetDailyRentalCost(int rentalDays);
         public abstract decimal GetInitialInsuranceCost();
         public abstract decimal GetAdjustedInsuranceCost();
+        public abstract decimal GetInsuranceAdjustment();
     }
 
     class Car : Vehicle
@@ -63,8 +64,14 @@ namespace VehicleRentalSystem
 
         public override decimal GetAdjustedInsuranceCost()
         {
-            decimal baseInsurance = Value * 0.0001m;
+            decimal baseInsurance = GetInitialInsuranceCost();
             return SafetyRating >= 4 ? baseInsurance * 0.9m : baseInsurance;
+        }
+
+        public override decimal GetInsuranceAdjustment()
+        {
+            decimal baseInsurance = GetInitialInsuranceCost();
+            return SafetyRating >= 4 ? baseInsurance * 0.1m : 0;
         }
     }
 
@@ -90,8 +97,14 @@ namespace VehicleRentalSystem
 
         public override decimal GetAdjustedInsuranceCost()
         {
-            decimal baseInsurance = Value * 0.0002m;
+            decimal baseInsurance = GetInitialInsuranceCost();
             return RiderAge < 25 ? baseInsurance * 1.2m : baseInsurance;
+        }
+
+        public override decimal GetInsuranceAdjustment()
+        {
+            decimal baseInsurance = GetInitialInsuranceCost();
+            return RiderAge < 25 ? baseInsurance * 0.2m : 0;
         }
     }
 
@@ -117,8 +130,14 @@ namespace VehicleRentalSystem
 
         public override decimal GetAdjustedInsuranceCost()
         {
-            decimal baseInsurance = Value * 0.0003m;
+            decimal baseInsurance = GetInitialInsuranceCost();
             return DriverExperience > 5 ? baseInsurance * 0.85m : baseInsurance;
+        }
+
+        public override decimal GetInsuranceAdjustment()
+        {
+            decimal baseInsurance = GetInitialInsuranceCost();
+            return DriverExperience > 5 ? baseInsurance * 0.15m : 0;
         }
     }
 
@@ -217,6 +236,32 @@ namespace VehicleRentalSystem
             Console.WriteLine($"Actual rental days: {rental.GetActualRentalDays()} days");
             Console.WriteLine();
             Console.WriteLine($"Rental cost per day: {rental.RentedVehicle.GetDailyRentalCost(rental.GetReservedRentalDays()):C2}");
+            Console.WriteLine($"Initial insurance per day: {rental.RentedVehicle.GetInitialInsuranceCost():C2}");
+
+            if (rental.RentedVehicle is Car)
+            {
+                car = (Car)rental.RentedVehicle;
+                if (car.SafetyRating >= 4)
+                {
+                    Console.WriteLine($"Insurance discount per day: {rental.RentedVehicle.GetInsuranceAdjustment():C2}");
+                }
+            }
+            else if (rental.RentedVehicle is Motorcycle motorcycle)
+            {
+                if (motorcycle.RiderAge < 25)
+                {
+                    Console.WriteLine($"Insurance addition per day: {rental.RentedVehicle.GetInsuranceAdjustment():C2}");
+                }
+            }
+            else if (rental.RentedVehicle is CargoVan cargoVan)
+            {
+                if (cargoVan.DriverExperience > 5)
+                {
+                    Console.WriteLine($"Insurance discount per day: {rental.RentedVehicle.GetInsuranceAdjustment():C2}");
+                }
+            }
+
+            Console.WriteLine($"Insurance per day: {rental.RentedVehicle.GetAdjustedInsuranceCost():C2}");
             Console.WriteLine($"Insurance per day: {rental.RentedVehicle.GetAdjustedInsuranceCost():C2}");
             Console.WriteLine();
             if (earlyReturnDiscount > 0)
