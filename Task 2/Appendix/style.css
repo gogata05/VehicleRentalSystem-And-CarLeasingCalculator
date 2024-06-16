@@ -67,6 +67,7 @@ label[for='carValue'] {
 
 #leasingDetailsTitle {
   text-align: center; /* Centering the title within the leasingDetails div */
+  font-size: 20px;
 }
 
 #leasingDetailsHorisontal {
@@ -92,4 +93,12 @@ label[for='carValue'] {
 
 .leasingDetails.p {
   font-size: 52px;
+}
+
+.one {
+  border-right: 1px solid black;
+}
+
+#leasingDetailsHorisontal p {
+  font-size: 16px;
 }
