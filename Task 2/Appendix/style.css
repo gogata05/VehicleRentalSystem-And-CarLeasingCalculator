@@ -19,6 +19,9 @@ body {
 
 h1 {
   text-align: center;
+  font-size: 24px;
+  margin: 21px 0;
+  word-wrap: break-word;
 }
 
 #leasingForm {
@@ -100,5 +103,11 @@ input[type='range'] {
 
   .one {
     border-right: 1px solid black;
+  }
+
+  h1 {
+    font-size: 32px; /* Връщаме размера на шрифта за уеб */
+    margin: 21px 0;
+    word-wrap: normal; /* Премахваме принудителното пренасяне на думи за уеб */
   }
 }
