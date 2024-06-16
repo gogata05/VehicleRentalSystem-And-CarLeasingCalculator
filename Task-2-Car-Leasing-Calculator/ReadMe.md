@@ -5,8 +5,8 @@
 
 Web:
 
-![image](../Task%202/Images/task2Web.png)
+![image](../Task-2-Car-Leasing-Calculator/Images/task2Web.png)
 
 Mobile:
 
-![image](../Task%202/Images/task2Mobile.png)
+![image](../Task-2-Car-Leasing-Calculator/Images/task2Mobile.png)

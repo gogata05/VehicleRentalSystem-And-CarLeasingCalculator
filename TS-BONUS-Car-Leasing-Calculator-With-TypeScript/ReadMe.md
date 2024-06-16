@@ -1,12 +1,13 @@
 ## How to use?
 
 - 1.Clone repo
-- 2.http-server in terminal
+- 2.tsc in terminal
+- 3.http-server in terminal
 
 Web:
 
-![image](../Task%202/Images/task2Web.png)
+![image](../TS-BONUS-Car-Leasing-Calculator-With-TypeScript/Images/task2Web.png)
 
 Mobile:
 
-![image](../Task%202/Images/task2Mobile.png)
+![image](../TS-BONUS-Car-Leasing-Calculator-With-TypeScript/Images/task2Mobile.png)
