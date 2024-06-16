@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.10.34928.147
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Appendix", "Appendix\Appendix.csproj", "{1E5B3507-3AA7-4116-AAC1-78A60C17D0F2}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "VehicleRentalSystem", "VehicleRentalSystem\VehicleRentalSystem.csproj", "{1E5B3507-3AA7-4116-AAC1-78A60C17D0F2}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
