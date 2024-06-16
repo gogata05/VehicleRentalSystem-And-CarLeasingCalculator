@@ -6,7 +6,14 @@ function calculateLeasing() {
   const leasePeriod = parseInt(document.getElementById('leasePeriod').value);
   const downPaymentPercent = parseFloat(document.getElementById('downPayment').value);
 
-  if (!carValue || !leasePeriod || !downPaymentPercent) return;
+  // if the value is not valid, set it to 0 so the user can't submit an invalid form
+  if (!carValue || carValue < 10000 || carValue > 200000 || !downPaymentPercent || downPaymentPercent < 10 || downPaymentPercent > 50) {
+    document.getElementById('totalLeasingCost').innerText = '0.00';
+    document.getElementById('monthlyInstallment').innerText = '0.00';
+    document.getElementById('downPaymentAmount').innerText = '0.00';
+    document.getElementById('interestRate').innerText = '0.00';
+    return;
+  }
 
   const downPaymentAmount = (carValue * downPaymentPercent) / 100;
   const principalAmount = carValue - downPaymentAmount;
