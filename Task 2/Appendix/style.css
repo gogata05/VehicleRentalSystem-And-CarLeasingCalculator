@@ -69,9 +69,13 @@ label[for='carValue'] {
   text-align: center; /* Centering the title within the leasingDetails div */
 }
 
-.leasing-detail {
+#leasingDetailsHorisontal {
   display: flex;
   justify-content: space-between;
+}
+
+.leasing-detail {
+  width: 48%; /* Each leasing-detail will take 48% of the width of the container */
 }
 
 .leasing-detail p {
