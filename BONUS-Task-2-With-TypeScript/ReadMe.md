@@ -1,17 +1,20 @@
 # Car Leasing Calculator
 
 ## Overview
+
 Our company is developing a user-friendly car leasing calculator to assist potential customers in estimating their monthly leasing costs. As part of our front-end development team, you'll be responsible for creating an intuitive web interface that allows users to input relevant details and receive accurate leasing information.
 
 ## Project Requirements
 
 ### User Interface (UI)
+
 - Design a clean and professional UI for the calculator using HTML and CSS.
 - Ensure the form elements are well-organized and visually appealing.
 - Implement responsive design to accommodate various screen sizes.
 - Pictures are added to the Appendix section.
 
 ### Functionality
+
 - Develop the calculator logic using TypeScript.
 - Capture the following user inputs:
   - Car type (brand new or used)
@@ -29,11 +32,13 @@ Our company is developing a user-friendly car leasing calculator to assist poten
 - All the inputs must dynamically change the results (no button to execute the calculation is required).
 
 ### Business Rules
+
 - For brand-new cars, apply an annual interest rate of 2.99%.
 - For used cars, use an annual interest rate of 3.7%.
 - Validate user inputs to prevent invalid values.
 
 ### Results Display
+
 - Provide a clear breakdown of the leasing cost components.
 - Show the calculated results below the form in two columns.
   - Left column:
@@ -44,6 +49,7 @@ Our company is developing a user-friendly car leasing calculator to assist poten
     - Interest rate
 
 ### Evaluation Criteria
+
 - Code quality: Well-structured, maintainable, and commented code.
 - Accuracy: Ensure accurate calculations and adherence to business rules.
 - User experience: Intuitive interface and error handling.
@@ -54,19 +60,23 @@ Our company is developing a user-friendly car leasing calculator to assist poten
 ### Step-by-Step Implementation
 
 #### Step 1: Setting Up the Project
+
 1. **index.html:**
+
    - Created the HTML structure with form elements to capture user inputs.
    - Included necessary IDs for TypeScript to access and manipulate the DOM elements.
 
 2. **style.css:**
+
    - Designed the UI using CSS to ensure a clean and professional look.
    - Implemented responsive design to accommodate various screen sizes.
 
 3. **app.js:**
-   - Developed the calculator logic using  TypeScript.
+   - Developed the calculator logic using TypeScript.
    - Added event listeners to form elements to dynamically calculate and update leasing costs based on user inputs.
 
 ### File Structure
+
 The final project structure looks like this:
 
 ```
@@ -82,6 +92,7 @@ CarLeasingCalculator
 │
 └── tsconfig.json
 ```
+
 ## How to use?
 
 - 1.Clone repo
