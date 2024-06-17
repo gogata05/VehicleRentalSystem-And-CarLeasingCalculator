@@ -61,3 +61,10 @@ VehicleRentalSystem
 1. Clone repository.
 2. Open "VehicleRentalSystem.sln" with Visual Studio 2022.
 3. Ctrl+F5
+
+### Photos
+
+Console Output:
+
+![image](https://imgur.com/JQQDj8e.png)
+
