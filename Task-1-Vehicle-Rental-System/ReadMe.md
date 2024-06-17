@@ -1,75 +1,63 @@
-Output:
+# Vehicle Rental System
 
-A car that is valued at $15,000.00, and has a security rating of 3
-XXXXXXXXXXXX
-Date: 2024-06-16
-Customer Name: John Doe
-Rented Vehicle: Mitsubishi Mirage
+## Overview
+This project is a Vehicle Rental System that allows users to rent various types of vehicles such as cars, motorcycles, and cargo vans. The application calculates rental costs, insurance, and generates invoices for the rentals.
 
-Reservation start date: 2024-06-03
-Reservation end date: 2024-06-13
-Reserved rental days: 10 days
+## Approach
 
-Actual return date: 2024-06-13
-Actual rental days: 10 days
+### Step-by-Step Implementation
 
-Rental cost per day: $15.00
-Initial insurance per day: $1.50
-Insurance per day: $1.50
+#### Step 1: Creating the Vehicle Class
+1. **Vehicle.cs:**
+   - Created an abstract base class `Vehicle` with common properties like `Brand`, `Model`, and `Value`.
+   - Added abstract methods for calculating rental cost and insurance.
 
-Total rent: $150.00
-Total Insurance: $15.00
+#### Step 2: Implementing Specific Vehicle Classes And Using Inheritance
+1. **Car.cs:**
+   - Created a `Car` class that inherits from `Vehicle`.
+   - Implemented methods for calculating daily rental cost and insurance adjustments based on safety ratings.
 
-Total: $165.00
-XXXXXXXXXXXX
+2. **Motorcycle.cs:**
+   - Created a `Motorcycle` class that inherits from `Vehicle`.
+   - Implemented methods for calculating daily rental cost and insurance adjustments based on rider age.
 
-A motorcycle valued at $10,000.00, and the driver is 20 years old
-XXXXXXXXXXXX
-Date: 2024-06-16
-Customer Name: Mary Johnson
-Rented Vehicle: Triumph Tiger Sport 660
+3. **CargoVan.cs:**
+   - Created a `CargoVan` class that inherits from `Vehicle`.
+   - Implemented methods for calculating daily rental cost and insurance adjustments based on driver experience.
 
-Reservation start date: 2024-06-03
-Reservation end date: 2024-06-13
-Reserved rental days: 10 days
+#### Step 3: Creating the Rental Class
+1. **Rental.cs:**
+   - Created a `Rental` class to handle rental details including the vehicle being rented, reservation dates, and actual return dates.
+   - Implemented methods to calculate the total rental cost and insurance cost, including discounts for early returns.
 
-Actual return date: 2024-06-13
-Actual rental days: 10 days
+#### Step 4: Generating Invoices
+1. **Invoice.cs:**
+   - Created a static `Invoice` class to generate and print invoices.
+   - Implemented a method to format and display detailed rental and insurance costs.
 
-Rental cost per day: $10.00
-Initial insurance per day: $2.00
-Insurance addition per day: $0.40
-Insurance per day: $2.40
+#### Step 5: Integrating All Components
+1. **Program.cs:**
+   - Integrated all the components by creating instances of `Car`, `Motorcycle`, and `CargoVan`.
+   - Created `Rental` instances for each vehicle.
+   - Used the `Invoice` class to generate invoices for each rental.
 
-Total rent: $100.00
-Total Insurance: $24.00
+### File Structure
+The final project structure looks like this:
+VehicleRentalSystem
 
-Total: $124.00
-XXXXXXXXXXXX
+```
+│
+├── Program.cs
+├── Vehicle.cs
+├── Car.cs
+├── Motorcycle.cs
+├── CargoVan.cs
+├── Rental.cs
+└── Invoice.cs
+```
 
-A cargo van valued at $20,000.00, and the driver has 8 years of driving experience
-XXXXXXXXXXXX
-Date: 2024-06-16
-Customer Name: John Markson
-Rented Vehicle: Citroen Jumper
+## How to Use
 
-Reservation start date: 2024-06-03
-Reservation end date: 2024-06-18
-Reserved rental days: 15 days
-
-Actual return date: 2024-06-13
-Actual rental days: 10 days
-
-Rental cost per day: $40.00
-Initial insurance per day: $6.00
-Insurance discount per day: $0.90
-Insurance per day: $5.10
-
-Early return discount for rent: $100.00
-Early return discount for insurance: $25.50
-
-Total rent: $500.00
-Total Insurance: $51.00
-
-Total: $551.00
-XXXXXXXXXXXX
+1. Clone repository.
+2. Open "VehicleRentalSystem.sln" with Visual Studio 2022.
+3. Ctrl+F5
